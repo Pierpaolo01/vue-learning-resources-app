@@ -5,7 +5,7 @@
 
         <header>
             <h2> {{ title }} </h2>
-            <base-button mode="flat" ></base-button>
+            <base-button mode="flat" @click="deleteResource(id)">delete</base-button>
         </header>
         <p>{{ descr }}</p>
         <nav>
@@ -38,7 +38,8 @@ export default {
           type: String,
           required: true,
       }
-  }
+  },
+  inject: ['deleteResource'],
 }
 </script>
 
